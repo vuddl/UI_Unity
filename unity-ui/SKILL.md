@@ -28,7 +28,7 @@ Chat chưa có vai: trở thành **UI_Skill** và mở luồng theo `references/
 
 1. Đọc `references/ui-standard.md` (và `assembly-guide.md` nếu ghép theo demo).
 2. Đọc mọi ảnh demo. Quét sprite của bộ UI. Tìm màn đã có cùng cấu trúc để tái dùng.
-3. Hỏi những điểm chưa rõ trước khi dựng.
+3. Hỏi những điểm chưa rõ trước khi dựng. Chưa chốt loại chữ và cách làm outline/shadow thì hỏi theo mục 2b `session-flow.md`.
 4. Dựng hoặc ghép theo checklist của `assembly-guide.md`, từng bước nhỏ, mỗi bước lưu một lần.
 5. Kiểm tra:
    - Phủ ảnh demo lên màn để so.

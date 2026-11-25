@@ -25,6 +25,23 @@ Claude (app desktop): đổi tên và mở phiên bằng công cụ quản lý p
 3. Ba phiên khớp nhau thì báo UI_Skill; UI_Skill báo người dùng tóm tắt. Chưa khớp thì chưa ghép.
 4. Lần sau đọc lại file này và chỉ quét phần đã đổi.
 
+## 2b. Chốt cách làm chữ (phiên Ghép UI hỏi một lần khi cài đặt)
+
+Quét project trước, chỉ hỏi phần chưa rõ. Ghi kết quả vào `Docs/UI/ui-project-map.md`; các màn sau dùng lại, không hỏi lại. Chưa mở luồng nhiều phiên thì vẫn hỏi bước này trước khi ghép màn đầu tiên.
+
+**Câu 1: mặc định dùng chữ gì?** `TMP` hoặc `Text thường (legacy)`. Chọn TMP mà project chưa có (package hoặc TMP Essentials): yêu cầu cài, người dùng đồng ý mới cài, biên dịch sạch rồi mới tiếp.
+
+**Câu 2: chữ có outline, drop shadow thì dùng gì?** Tìm package hiệu ứng chữ/UI (UIFX, UIEffect…) trong `Packages/`, `Assets/`.
+
+- **Tìm thấy:** báo "đã có package X" và dùng nó.
+- **Không tìm thấy:** hỏi người dùng có package không.
+  - **Có, trong project rồi:** người dùng báo tên hoặc đường dẫn; kiểm tra lại rồi dùng.
+  - **Có, kéo package vào:** người dùng tự kéo vào; chờ họ báo xong và biên dịch sạch.
+  - **Không có:** chọn một trong ba:
+    1. Bỏ, không dùng outline/shadow.
+    2. Tự tạo material TMP có outline/underlay (chỉ khi dùng TMP). Tạo material preset mới theo font, không sửa material gốc và không sửa font asset.
+    3. Text thường + component Outline / Shadow. Nếu câu 1 chọn TMP thì chỉ các chữ có hiệu ứng mới dùng Text thường.
+
 ## 3. Chia việc và báo cáo
 
 - Người dùng ra lệnh ở UI_Skill. UI_Skill tự giao cho đúng phiên, việc ghép nhiều vai thì tách theo vai.

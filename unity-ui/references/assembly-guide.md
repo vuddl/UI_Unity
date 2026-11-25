@@ -74,7 +74,7 @@
 ## 6. Chữ (TMP)
 
 - **Font theo từng dòng chữ**: so kiểu chữ trong demo với các font trong thư mục Font của project; không dùng một font cho tất cả. Không chắc → hỏi.
-- **Viền / bóng** (vd UIFX Outline + DropShadow) chỉ thêm ở chỗ demo có; chỗ không có để chữ trơn.
+- **Viền / bóng** (vd UIFX Outline + DropShadow) chỉ thêm ở chỗ demo có; chỗ không có để chữ trơn. Cách làm (package, material TMP hay component) theo lựa chọn đã chốt ở mục 2b `session-flow.md`.
 - **Khớp kích thước**: đo khung nét chữ trong demo theo màu → cỡ chữ theo chiều cao, khoảng cách chữ theo chiều rộng, rồi đặt tâm. Đo phía Unity bằng khung glyph thật (characterInfo), không dùng khung dòng.
 - **Chữ trong nút**: stretch hết nút, căn giữa, character spacing 0, rồi **khớp theo hình**, không tin vào căn giữa bằng thông số (đặt giữa và căn giữa vẫn có thể lệch, vì ảnh nút có bóng/dải đậm ở đáy và font có khoảng thừa):
   - Đo trong demo: mép trên mặt nút → đỉnh chữ (gapTop) và đáy chữ → mép dưới mặt nút (gapBottom). Mặt nút không tính viền đen và bóng. Độ lệch = (gapBottom − gapTop) ÷ 2, dương là chữ nằm cao hơn tâm mặt nút.
