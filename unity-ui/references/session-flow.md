@@ -20,7 +20,7 @@ Claude (app desktop): đổi tên và mở phiên bằng công cụ quản lý p
 
 ## 2. Quét cấu trúc UI (trước khi ghép)
 
-1. **Ghép UI** quét: UI Manager và lớp UI gốc, cách mở/đóng màn, luồng show/hide, backdrop, prefab dùng chung, font, bộ sprite và 9-slice, quy ước tên, cách code giữ reference. Ghi vào `Docs/UI/ui-project-map.md` của project.
+1. **Ghép UI** quét: UI Manager và lớp UI gốc, cách mở/đóng màn, luồng show/hide, backdrop, safe area, prefab dùng chung, font, bộ sprite và 9-slice, quy ước tên, cách code giữ reference. Ghi vào `Docs/UI/ui-project-map.md` của project.
 2. **Nối logic** và **Animation** đọc bản đó, đối chiếu với code, bổ sung hoặc phản biện.
 3. Ba phiên khớp nhau thì báo UI_Skill; UI_Skill báo người dùng tóm tắt. Chưa khớp thì chưa ghép.
 4. Lần sau đọc lại file này và chỉ quét phần đã đổi.
@@ -41,6 +41,19 @@ Quét project trước, chỉ hỏi phần chưa rõ. Ghi kết quả vào `Docs
     1. Bỏ, không dùng outline/shadow.
     2. Tự tạo material TMP có outline/underlay (chỉ khi dùng TMP). Tạo material preset mới theo font, không sửa material gốc và không sửa font asset.
     3. Text thường + component Outline / Shadow. Nếu câu 1 chọn TMP thì chỉ các chữ có hiệu ứng mới dùng Text thường.
+
+## 2c. Chốt safe area (phiên Ghép UI, một lần khi cài đặt)
+
+Quét project trước, chỉ hỏi phần chưa rõ. Ghi kết quả vào `Docs/UI/ui-project-map.md`.
+
+1. **Tìm component SafeArea.** Có thì báo tên, đường dẫn, cách cập nhật và dùng nó. Chưa có thì hỏi: tự viết một component nhỏ, dùng package người dùng đưa, hay không dùng.
+2. **Hỏi phạm vi nếu chưa rõ:** hướng màn hình (ngang, dọc, xoay được) và áp dụng cho màn nào.
+3. **Khi ghép mỗi màn** (chi tiết ở mục 7 `ui-standard.md`):
+   - Nền, dim, hiệu ứng phủ màn và tâm ngắm: toàn Canvas, ngoài SafeArea.
+   - HUD, tiêu đề, nút góc, thanh tiền, nút đóng sát mép: trong một `SafeContent` có SafeArea. Không lồng hai SafeArea.
+   - Popup nằm giữa màn và không chạm mép: không cần SafeArea.
+   - Object trong `SafeContent` neo theo mép của nó; chừa vùng banner quảng cáo nếu có.
+4. **Kiểm tra bàn giao:** Device Simulator hoặc Game View với tai thỏ bên trái, bên phải và thanh vuốt dưới. Ghi vào gói bàn giao màn nào dùng SafeArea; màn cố tình bỏ qua thì nêu lý do.
 
 ## 3. Chia việc và báo cáo
 

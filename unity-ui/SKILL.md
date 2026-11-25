@@ -28,13 +28,14 @@ Chat chưa có vai: trở thành **UI_Skill** và mở luồng theo `references/
 
 1. Đọc `references/ui-standard.md` (và `assembly-guide.md` nếu ghép theo demo).
 2. Đọc mọi ảnh demo. Quét sprite của bộ UI. Tìm màn đã có cùng cấu trúc để tái dùng.
-3. Hỏi những điểm chưa rõ trước khi dựng. Chưa chốt loại chữ và cách làm outline/shadow thì hỏi theo mục 2b `session-flow.md`.
+3. Hỏi những điểm chưa rõ trước khi dựng. Chưa chốt loại chữ và cách làm outline/shadow thì hỏi theo mục 2b, chưa chốt safe area thì theo mục 2c `session-flow.md`.
 4. Dựng hoặc ghép theo checklist của `assembly-guide.md`, từng bước nhỏ, mỗi bước lưu một lần.
 5. Kiểm tra:
    - Phủ ảnh demo lên màn để so.
    - Rà soát ảnh méo.
    - Không mất script hay reference.
    - Không còn object thừa.
+   - Safe area đúng mục 2c `session-flow.md`.
    - Đi hết checklist mục 15 của `ui-standard.md`.
 6. Animation show/hide: đã cài `unity-ui-animation` thì dùng skill đó (trong luồng nhiều phiên do phiên Animation làm). Chưa cài: dùng luồng UI có sẵn của project. Hỏi người làm muốn animation thế nào và đề xuất 2–3 phương án kèm khuyến nghị trước khi làm (mục 10 `assembly-guide.md`).
 7. Báo lại: đã làm gì, chỗ còn lệch và lý do, câu hỏi còn mở.
