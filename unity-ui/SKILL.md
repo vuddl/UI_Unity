@@ -12,6 +12,7 @@ Dùng cho mọi project Unity uGUI, với Claude Code, Codex hay agent khác. T�
 | `references/ui-standard.md` | Luôn đọc trước khi dựng, sửa hoặc review UI: Canvas, anchor, LayoutGroup, code auto-layout chỉ chạy trong OnEnable, UIManager, checklist bàn giao (mục 15). |
 | `references/assembly-guide.md` | Khi ghép màn theo ảnh demo: đo khớp pixel, sprite và 9-slice, font, prefab, danh sách cuộn, quy trình an toàn, animation show/hide (mục 10). |
 | `references/session-flow.md` | Khi người dùng gõ `/unity-ui`, hoặc phiên này được giao vai Ghép UI, Nối logic, Animation: mở phiên, chia việc, báo cáo, lượt dùng Unity, cách làm ở Codex. |
+| `references/example-as92.md` | Chỉ để tham khảo cách áp dụng vào một project thật; không phải quy tắc. |
 
 ## Khi người dùng gõ /unity-ui
 
